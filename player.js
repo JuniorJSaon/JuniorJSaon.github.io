@@ -1,11 +1,9 @@
 
-( () => {
-     const clock = document.getElementById("clock");
+( function () {
+     console.log(arguments);
 
-     function playSound(filename) {
-          const audio = new Audio(`sounds/${filename}`);
-          audio.play();
-     }
+     const clock = document.getElementById("clock");
+     const audio = new Audio(`sounds/${"tic-tac.MP3"}`);
 
      function getTimeRemaining() {
           const now = new Date(); 
@@ -24,8 +22,8 @@
           const hours = Math.floor((diffSec % (3600 * 24)) / 3600);
           const minutes = Math.floor((diffSec % 3600) / 60);
           const seconds = diffSec % 60;
-      
-          playSound("tic-tac.MP3");
+          
+          audio.play();
           clock.textContent = `Time left: ${days}d ${hours}h ${minutes}min ${seconds}sec.`;
      }
      getTimeRemaining();
