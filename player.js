@@ -7,7 +7,7 @@
 
     function getTimeRemaining() {
         const now = new Date(); 
-        const nextYear = now.getFullYear() + 1; 
+        const nextYear = 2026; 
         const targetDate = new Date(nextYear, 4, 4, 9, 0, 0); 
     
         const diffMs = targetDate - now;
